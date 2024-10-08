@@ -13,7 +13,7 @@ const {
   ConfigurationBotFrameworkAuthentication,
 } = require("botbuilder");
 
-const {EchoBot} = require("./bot");
+const {TeamsBot} = require("./bot");
 
 // Create HTTP server
 const server = restify.createServer();
@@ -55,7 +55,7 @@ const onTurnErrorHandler = async (context, error) => {
 adapter.onTurnError = onTurnErrorHandler;
 
 // Create the main dialog.
-const myBot = new EchoBot();
+const myBot = new TeamsBot();
 
 // Listen for incoming requests.
 server.post("/api/messages", async (req, res) => {

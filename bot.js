@@ -1,6 +1,6 @@
 const {ActivityHandler, MessageFactory} = require("botbuilder");
 
-class EchoBot extends ActivityHandler {
+class TeamsBot extends ActivityHandler {
   constructor() {
     super();
     this.onMessage(async (context, next) => {
@@ -50,4 +50,4 @@ class EchoBot extends ActivityHandler {
   }
 }
 
-module.exports.EchoBot = EchoBot;
+module.exports.TeamsBot = TeamsBot;
